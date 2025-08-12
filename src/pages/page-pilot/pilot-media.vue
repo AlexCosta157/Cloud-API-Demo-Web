@@ -89,6 +89,7 @@ const onVideoUpload = () => {
 }
 const onPhototype = () => {
   apiPilot.setUploadPhotoType(photoType.value)
+  console.log('WTF')
 }
 const onUploadPath = (e: any) => {
   apiPilot.setDownloadOwner(uploadPath.value)

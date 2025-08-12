@@ -60,6 +60,7 @@ export default defineComponent({
       { key: 4, label: 'Flight Route Library', path: '/' + ERouterName.WAYLINE, icon: 'NodeIndexOutlined' },
       { key: 5, label: 'Task Plan Library', path: '/' + ERouterName.TASK, icon: 'CalendarOutlined' },
       { key: 6, label: 'Flight Area', path: '/' + ERouterName.FLIGHT_AREA, icon: 'GroupOutlined' },
+      { key: 7, label: 'Geosense', path: '/' + ERouterName.GEOSENSE, icon: 'GroupOutlined' },
     ]
 
     function selectedRoute (item: IOptions) {

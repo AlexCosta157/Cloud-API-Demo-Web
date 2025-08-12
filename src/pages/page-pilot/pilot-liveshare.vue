@@ -138,6 +138,7 @@ import apiPilot from '/@/api/pilot-bridge'
 import { getRoot } from '/@/root'
 import { ELiveStatusValue, EStatusValue } from '/@/types'
 import { CaretRightFilled } from '@ant-design/icons-vue'
+import { getLivestreamUrl } from '/@/api/manage'
 
 const root = getRoot()
 
@@ -179,7 +180,7 @@ const agoraParam = reactive({
   channelId: config.agoraChannel
 })
 const rtmpParam = {
-  url: config.rtmpURL + new Date().getTime()
+  url: 'rtmp://a.rtmp.youtube.com/live2/har4-m3s1-08w3-v7r7-0cac' // config.rtmpURL + new Date().getTime()
 }
 const rtspParam: RTSPParam = {
   userName: CURRENT_CONFIG.rtspUserName,
@@ -287,6 +288,12 @@ const onPlay = () => {
       break
     }
     case 2: {
+      /* getLivestreamUrl().then(res => {
+        console.log(res)
+        console.log(res.data)
+        //rtmpParam.url = res.data
+         // ALEX - AQUI URL
+      }) */
       apiPilot.setLiveshareConfig(ELiveTypeValue.RTMP, JSON.stringify(rtmpParam))
       break
     }

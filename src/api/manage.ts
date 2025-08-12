@@ -73,6 +73,8 @@ export const getLiveCapacity = async function (body: {}): Promise<IWorkspaceResp
 export const startLivestream = async function (body: {}): Promise<IWorkspaceResponse<any>> {
   const url = `${HTTP_PREFIX}/live/streams/start`
   const result = await request.post(url, body)
+  console.log('KUN_FRE')
+  console.log(result)
   return result.data
 }
 
@@ -115,6 +117,13 @@ export const unbindDevice = async function (device_sn: string): Promise<IWorkspa
 
 export const getDeviceBySn = async function (workspace_id: string, device_sn: string): Promise<IWorkspaceResponse<any>> {
   const url = `${HTTP_PREFIX}/devices/${workspace_id}/devices/${device_sn}`
+  const result = await request.get(url)
+  return result.data
+}
+
+// ALEX WAS HERE
+export const getLivestreamUrl = async function (): Promise<IWorkspaceResponse<any>> {
+  const url = `${HTTP_PREFIX}/live/streams/youtube`
   const result = await request.get(url)
   return result.data
 }

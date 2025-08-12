@@ -16,6 +16,7 @@ export enum ERouterName {
     SELECT_PLAN = 'select-plan',
     FIRMWARES = 'firmwares',
     FLIGHT_AREA = 'flight-area',
+    GEOSENSE = 'geosense',
 
     PILOT = 'pilot-login',
     PILOT_HOME = 'pilot-home',

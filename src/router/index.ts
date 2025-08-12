@@ -109,6 +109,12 @@ const routes: Array<RouteRecordRaw> = [
         name: ERouterName.FLIGHT_AREA,
         component: () => import('/@/pages/page-web/projects/flight-area.vue')
       },
+
+      {
+        path: '/' + ERouterName.GEOSENSE,
+        name: ERouterName.GEOSENSE,
+        component: () => import('/@/pages/page-web/projects/geosense.vue')
+      },
     ]
   },
   // pilot
